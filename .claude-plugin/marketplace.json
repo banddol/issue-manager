@@ -1,0 +1,35 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "issue-manager",
+  "version": "1.0.0",
+  "description": "Service-oriented GitHub issue management for Claude Code. Creates, refines, and organizes issues with consistent quality using project-specific templates.",
+  "owner": {
+    "name": "banddol",
+    "url": "https://github.com/banddol"
+  },
+  "plugins": [
+    {
+      "name": "issue-manager",
+      "description": "GitHub issue lifecycle management — create with service context, refine existing issues, organize with master epics and dependency graphs.",
+      "version": "1.0.0",
+      "author": {
+        "name": "banddol"
+      },
+      "repository": "https://github.com/banddol/issue-manager",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/banddol/issue-manager.git"
+      },
+      "category": "productivity",
+      "keywords": [
+        "github",
+        "issues",
+        "project-management",
+        "service-design",
+        "ux",
+        "epic",
+        "organization"
+      ]
+    }
+  ]
+}
