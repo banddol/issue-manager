@@ -11,8 +11,8 @@ Create, refine, organize, monitor, and clean up issues — all with consistent q
 | `/issue-setup` | Setup | Auto-detect project structure, configure labels/fields/templates |
 | `/issue` | Create | Create issues with service context, UX flows, and technical design |
 | `/issue-refine` | Improve | Strengthen existing issues, quality audit with scoring |
-| `/issue-organize` | Structure | Domain clustering, master epics, duplicate detection, dependency mapping |
-| `/issue-status` | Monitor | Progress dashboard, stale alerts, weekly trends |
+| `/issue-organize` | Structure | Domain clustering, master epics, duplicate detection, dependency mapping, Projects field triage |
+| `/issue-status` | Monitor | Projects-aware dashboard with Phase/Priority/Track breakdown, stale alerts, weekly trends |
 | `/issue-close` | Cleanup | Close stale issues, detect completed, merge duplicates |
 
 ```
@@ -72,12 +72,19 @@ Auto-detects your project's language from documentation content. Supports: en, k
 # Backlog structure
 /issue-organize
 /issue-organize --find-orphans
+/issue-organize --find-duplicates
 /issue-organize --create-master domain:auth
 
-# Status dashboard
+# Triage Projects fields (Phase/Priority/Track/Status)
+/issue-organize --triage              # Detect missing/inconsistent fields
+/issue-organize --triage --auto       # Auto-suggest values, confirm before applying
+/issue-organize --triage domain:comm  # Triage specific domain only
+
+# Status dashboard (Projects-aware)
 /issue-status
 /issue-status --weekly
 /issue-status --alerts
+/issue-status --priority              # Priority-first view (P0 → P1 → P2)
 
 # Cleanup
 /issue-close --stale
